@@ -1,0 +1,42 @@
+body
+{
+font-family: Montserrat;
+}
+.container{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 5% !important;
+}
+.header
+{
+    background-color: #C5C5C5;
+    height: 27.5em !important;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.footer{
+  width:100%;
+  display:block;
+  clear:none;
+  position: fixed;
+  bottom:0;
+  padding-top:0.5%;
+  font-size: 10px;
+  font-weight:200;
+  color:#888;
+  background: #E0E0E0;
+
+}
+.footer p{
+  display:inline-block;
+  padding-left:10%;
+  text-align:left;
+}
+.current-time {
+  text-align:right !important;
+  width:70% !important;
+}

@@ -1,0 +1,319 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+        <script src="resources/js/jquery.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        
+    <style>
+        body
+        {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+            background-color: #fef3f4;
+        }
+        .img-title{
+            width:100%;
+            height: 30%;
+            margin-bottom: 2%;
+            border-radius: 5px;
+            margin-top: 20% !important;
+        }
+        .container{
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            padding-bottom: 5% !important;
+            background-color: #f2f9fa;
+        }
+        .inner{
+            margin-left: 2%;
+            margin-right:2%;
+            margin-top: 1%;
+            margin-bottom: 2%;
+            border-radius: 10px;
+        }
+        .header-menu{
+            background-color: #fff; 
+            height: 5em; 
+            box-shadow: 0 0 10px 0px #c3c3c3; 
+            z-index: 1;
+        }
+        .tittle{
+            font-size: larger;
+            margin-top: 2%;
+            text-align: center;
+        }
+        .header
+        {
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 1%;
+            padding-bottom: 5%;
+        }
+        .col-sm-12{
+            margin-top: 3%;
+            background-color: white;
+            padding-top: 3%;
+            padding-left: 3.5%;
+            padding-right: 2%;
+            padding-bottom: 3%;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgb(0,0,0,0.1);
+        }
+        table {
+            width: 100% !important;
+            height: 40%;
+            text-align: center;
+        }
+        .statusok{
+            color:#3a9428;
+        }
+        .statusng{
+            color:red;
+        }
+        /*.count{
+            display: flex;
+            clear: none;
+            float: right;
+            padding-top: 0.4em;
+            padding-bottom: 0.4em;
+            padding-left: 2em;
+            padding-right: 1.5em;
+            border-radius: 5px;   
+        }*/
+        .footer{
+            width:100%;
+            display:flex;
+            padding-top:0.5%;
+            font-size: 10px;
+            font-weight:200;
+            color:#888;
+            background: #E0E0E0;
+        }
+    
+        .footer p{
+            display:inline-block;
+            padding-left:10%;
+            text-align:left;
+        }
+        .current-time {
+            text-align:right !important;
+            width:70% !important;
+        }
+    </style>
+<title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-menu">
+            <!--<img src="{{url_for('static', filename = 'img/abd-allied-blenders-distillers.png')}}" class="" alt="" style="width: 10%; height: auto !important; margin-top:0.5%; margin-left: 10%;">
+            <img src="{{url_for('static', filename = 'img/3rd-logo-new.png')}}" class="" alt="" style="width: 5% ; margin-top: 1%; border-radius: 0px !important; height: auto !important; margin-right: 10%; float: right;">-->
+            <img src="resources/images/JBM-Group.jpeg" class="" alt="" style="width: 10%; height: auto !important; margin-top:1%; margin-left: 10%;">
+            <span style="text-align: center; font-size: 21px; margin-left: 25%;"></span>
+            <img src="resources/images/enco-logo.png" class="" alt="" style="width: 10% ; margin-top: 1.5%; border-radius: 0px !important; height: auto !important; margin-right: 10%; float: right;">
+        </div>
+        <div class="inner">
+            <div class="header tabs">
+                <div class="nav-box">
+                    <div class="col-sm-6">
+                        <div class="tittle">View-1</div>
+                        <div class="col-sm-12">
+                            <!--<img id ="base" src="{{url_for('static', filename = 'img/officer-choice.jpeg')}}">-->
+                            <div class="col-sm-4"><img id ="base" src="img/officer-choice.jpeg" class="img-title"></div>
+                            <div class="col-sm-8">
+                                <table>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Measurement in mm</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="tittle">View-2</div>
+                        <div class="col-sm-12">
+                            <!--<img id ="base" src="{{url_for('static', filename = 'img/officer-choice.jpeg')}}">-->
+                            <div class="col-sm-4"><img id ="base" src="img/officer-choice.jpeg" class="img-title"></div>
+                            <div class="col-sm-8">
+                                <table>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Measurement in mm</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="tittle">View-3</div>
+                        <div class="col-sm-12">
+                            <!--<img id ="base" src="{{url_for('static', filename = 'img/officer-choice.jpeg')}}">-->
+                            <div class="col-sm-4"><img id ="base" src="img/officer-choice.jpeg" class="img-title"></div>
+                            <div class="col-sm-8">
+                                <table>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Measurement in mm</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="tittle">View-4</div>
+                        <div class="col-sm-12">
+                            <!--<img id ="base" src="{{url_for('static', filename = 'img/officer-choice.jpeg')}}">-->
+                            <div class="col-sm-4"><img id ="base" src="img/officer-choice.jpeg" class="img-title"></div>
+                            <div class="col-sm-8">
+                                <table>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Measurement in mm</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusok">OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>23.1</td>
+                                        <td><span id ="response" class="statusng">NG</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div class="footer">
+                <p>powered by ThirdEye AI.</p>
+                <p class="current-time"><span id='date-time'></span>.</p>
+            </div>
+        </footer> 
+    <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+    </script>
+</body>
+</html>
